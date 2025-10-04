@@ -1,4 +1,8 @@
-\ProvidesPackage{LUwritings}[2025/10/04 v1.0 A custom template for Lund University]
+\ProvidesPackage{LUwritings}[2025/10/04 v1.1 A custom template for Lund University]
+
+% TODO: 
+% 1. More examples of tables/images
+% 2. Bibtex
 
 % --- Basic Encoding and Font Setup ---
 \RequirePackage[utf8]{inputenc}      % Use standard UTF-8 encoding.
@@ -40,7 +44,7 @@
 \RequirePackage{float}         % Improved control over floating objects like figures.
 \RequirePackage{pgfplots}      % For creating plots and graphs within LaTeX.
 \pgfplotsset{compat=1.18}     % Set the compatibility version for pgfplots.
-
+\RequirePackage{booktabs}     % For better table formatting.
 % --- Page Layout and Formatting ---
 \RequirePackage[a4paper, lmargin=0.1666\paperwidth, rmargin=0.1666\paperwidth, tmargin=0.1111\paperheight, bmargin=0.1111\paperheight]{geometry}
 \RequirePackage{setspace}      % Provides robust control over line spacing.
