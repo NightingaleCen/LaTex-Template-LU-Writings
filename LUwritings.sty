@@ -1,0 +1,56 @@
+\ProvidesPackage{LUwritings}[2025/10/04 v1.0 A custom template for Lund University]
+
+% --- Basic Encoding and Font Setup ---
+\RequirePackage[utf8]{inputenc}      % Use standard UTF-8 encoding.
+\RequirePackage[T1]{fontenc}         % Use T1 font encoding for proper character rendering.
+\RequirePackage{newtxtext, newtxmath} % Use newtx for better Times font support (replaces obsolete mathptmx).
+\RequirePackage{microtype}           % Improves typography (micro-adjustments to spacing); load after fonts.
+
+% --- Math and Code Formatting ---
+\RequirePackage{amsmath}
+% \RequirePackage{amssymb}           % This line is removed. newtxmath includes all amssymb symbols, 
+                                     % so keeping it would cause command definition conflicts.
+\RequirePackage{array}               % For more advanced table column formatting.
+\RequirePackage{xcolor}              % Provides color capabilities.
+\RequirePackage{listings}            % For typesetting code snippets.
+\lstset{
+    breaklines=true,
+    breakatwhitespace=true,
+    basicstyle=\small\ttfamily,
+    columns=flexible,
+    backgroundcolor=\color{gray!10},
+    frame=single,
+    frameround=tttt,
+    framesep=5pt,
+    rulecolor=\color{gray!30},
+    commentstyle=\color{gray!60}\itshape,
+    keywordstyle=\color{black}\bfseries,
+    stringstyle=\color{gray!40},
+    numberstyle=\tiny\color{gray!50},
+    captionpos=b,
+    belowcaptionskip=5pt,
+    abovecaptionskip=5pt
+}
+\renewcommand{\lstlistingname}{Code} % Renames the default "Listing" caption to "Code".
+
+% --- Figures, Tables, and Floats ---
+\RequirePackage{graphicx}      % For including images. Driver option [pdftex] is usually auto-detected.
+\RequirePackage{subcaption}    % For creating subfigures and subtables.
+\RequirePackage{tcolorbox}     % For creating colored and framed text boxes.
+\RequirePackage{float}         % Improved control over floating objects like figures.
+\RequirePackage{pgfplots}      % For creating plots and graphs within LaTeX.
+\pgfplotsset{compat=1.18}     % Set the compatibility version for pgfplots.
+
+% --- Page Layout and Formatting ---
+\RequirePackage[a4paper, lmargin=0.1666\paperwidth, rmargin=0.1666\paperwidth, tmargin=0.1111\paperheight, bmargin=0.1111\paperheight]{geometry}
+\RequirePackage{setspace}      % Provides robust control over line spacing.
+\setstretch{1.2}               % A robust alternative to \linespread{1.2}.
+\frenchspacing                 % Disables extra space after periods.
+\RequirePackage{parskip}       % Separates paragraphs with vertical space instead of indentation.
+\RequirePackage{nowidow}       % Tries to prevent widow lines at the top of a page.
+\RequirePackage{enumitem}      % Provides control over list environments (itemize, enumerate).
+\RequirePackage{calc}          % Allows infix arithmetic in commands.
+
+% --- Other Functionality ---
+\RequirePackage[hidelinks]{hyperref} % For PDF hyperlinks; hidelinks removes the colored boxes.
+\RequirePackage{lipsum}              % For generating placeholder "Lorem Ipsum" text.
