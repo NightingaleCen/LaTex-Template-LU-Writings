@@ -17,6 +17,21 @@
 \RequirePackage{array}               % For more advanced table column formatting.
 \RequirePackage{xcolor}              % Provides color capabilities.
 \RequirePackage{listings}            % For typesetting code snippets.
+\RequirePackage{tikz}                % For drawing general diagrams.
+
+% --- Loading common TikZ Libraries for convenience ---
+\usetikzlibrary{
+    backgrounds,   
+    positioning,   
+    arrows.meta,   
+    calc,           
+    fit,            
+    quotes,      
+    matrix,        
+    shapes.geometric
+}
+
+% --- Setting up the code listing style ---
 \lstset{
     breaklines=true,
     breakatwhitespace=true,
