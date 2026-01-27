@@ -22,11 +22,157 @@ pdfauthor = {John Smith}
 
 \maketitle
 
-\section{Code Example}
+\section{Section}
+
+This is a section example.\footnote{An example for a footnote} The following sections demonstrate some common elements you can use in your documents, including code snippets, figures, etc.
+
+\subsection{Subsection}
+
+This is a subsection that provides more detailed information. You can organize your content hierarchically using subsections and subsubsections.
+
+\subsubsection{Subsubsection}
+
+Here is a subsubsection with even more specific content. Below is an example of an unordered list:
+
+\begin{itemize}
+	\item First item in the list
+	\item Second item in the list
+	\item Third item in the list
+\end{itemize}
+
+\subsection{Another Subsection}
+
+This subsection demonstrates an ordered list:
+
+\begin{enumerate}
+	\item First numbered item
+	\item Second numbered item
+	\item Third numbered item
+\end{enumerate}
+
+\subsubsection{Nested Lists}
+
+You can also create nested lists for more complex structures:
+
+\begin{itemize}
+	\item Main item one
+		\begin{itemize}
+			\item Nested item one
+			\item Nested item two
+		\end{itemize}
+	\item Main item two
+\end{itemize}
+
+\section{Figures}
+
+This subsection demonstrates how to include images in your document. Fig.~\ref{fig:single_image} shows a single image example with the Lund University logo. The image is centered and scaled to 60\% of the text width for proper display.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{img/Lund_university_L_RGB.png}
+	\caption{Single Image Example}
+	\label{fig:single_image}
+\end{figure}
+
+When you need to display multiple related images side by side, subfigures provide an excellent solution. Fig.~\ref{fig:subfigures} presents two subfigures: Fig.~\ref{fig:subfig1} displays the Lund University C logo on the left, while Fig.~\ref{fig:subfig2} shows the LTH logo on the right. Each subfigure can be referenced individually while also being part of a larger figure group.
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/LundUniversity_C_RGB.png}
+		\caption{First subfigure}
+		\label{fig:subfig1}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/LTH_RGB_ENG.png}
+		\caption{Second subfigure}
+		\label{fig:subfig2}
+	\end{subfigure}
+	\caption{Two Subfigures Example}
+	\label{fig:subfigures}
+\end{figure}
+
+
+\section{Tables}
+This section demonstrates how to create professional-looking tables using the \texttt{booktabs} package. Table~\ref{tab:example} shows a simple table with proper formatting using horizontal rules.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lcc}
+		\toprule
+		\textbf{Column 1} & \textbf{Column 2} & \textbf{Column 3} \\
+		\midrule
+		Row 1, Col 1 & 10 & 20 \\
+		Row 2, Col 1 & 30 & 40 \\
+		Row 3, Col 1 & 50 & 60 \\
+		\bottomrule
+	\end{tabular}
+	\caption{Example Table with booktabs Formatting}
+	\label{tab:example}
+\end{table}
+
+
+\section{Code snippets}
+
+Below is an example of how to include and format code in your document. Code~\ref{code:code_example} demonstrates basic syntax highlighting and code formatting capabilities.
 
 \begin{lstlisting}[language=Python, caption={Code Example}, label={code:code_example}]
 def hello_world():
     print("hello world")
 \end{lstlisting}
+
+\section{Mathematics}
+
+This section demonstrates various ways to typeset mathematical equations in \LaTeX{}. From simple inline equations to complex multi-line displays, these examples showcase the capabilities of the \texttt{amsmath} package.
+
+\subsection{Inline Equations}
+
+Inline equations are placed within text, such as $E = mc^2$, the famous mass-energy equivalence formula. Another example is the quadratic formula: $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$.
+
+\subsection{Display Equations}
+
+A simple display equation is shown below:
+\[
+	\int_0^\infty e^{-x^2} \, dx = \frac{\sqrt{\pi}}{2}
+\]
+
+\subsection{Numbered Equations}
+
+For equations that need to be referenced, use the \texttt{equation} environment:
+\begin{equation}
+	\label{eq:pythagorean}
+	a^2 + b^2 = c^2
+\end{equation}
+
+The Pythagorean theorem is shown in Eq.~\ref{eq:pythagorean}.
+
+\subsection{Multi-line Equations}
+
+For systems of equations or derivations, the \texttt{align*} environment is useful:
+\begin{align*}
+	(x + y)^2 &= x^2 + 2xy + y^2 \\
+	&= x^2 + xy + xy + y^2 \\
+	&= x(x + y) + y(x + y)
+\end{align*}
+
+With numbering and references:
+\begin{align}
+	f(x) &= x^2 + 3x + 2 \label{eq:quadratic} \\
+	f'(x) &= 2x + 3 \label{eq:derivative}
+\end{align}
+
+From Eq.~\ref{eq:quadratic} and Eq.~\ref{eq:derivative}, we can analyze the function's behavior.
+
+\subsection{Cases and Piecewise Functions}
+
+\begin{equation}
+	|x| = \begin{cases}
+		x & \text{if } x \geq 0 \\
+		-x & \text{if } x < 0
+	\end{cases}
+\end{equation}
 
 \end{document}
